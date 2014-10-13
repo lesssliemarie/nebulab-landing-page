@@ -1,0 +1,401 @@
+/* NEBULAB.IO LANDING PAGE */
+
+/*----------------------------------------------------------------------------
+
+   Viewport Rules
+
+----------------------------------------------------------------------------*/
+
+@-ms-viewport{
+	width: device-width;
+}
+@-moz-viewport{
+	width: device-width;
+}
+@-o-viewport{
+	width: device-width;
+}
+@-webkit-viewport{
+	width: device-width;
+}
+@viewport{
+	width: device-width;
+}
+
+/*----------------------------------------------------------------------------
+
+   Resets
+
+----------------------------------------------------------------------------*/
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body, html, div, blockquote, img, label, p, a, h1, h2, h3, h4, h5, h6, pre, ul,
+ol, li, dl, dt, dd, form, fieldset, input, th, td, figure {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+}
+img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+	width: auto;
+}
+video {
+	height: auto;
+	max-width: 100%;
+}
+a, :focus {
+	outline: 0;
+}
+a {
+	transition: all 0.25s ease-in-out 0s;
+	-webkit-transition: all 0.25s ease-in-out 0s;
+	    -ms-transition: all 0.25s ease-in-out 0s;
+	     -o-transition: all 0.25s ease-in-out 0s;
+}
+a, a:visited {
+	color: #6db2c8;
+	text-decoration: none;
+}
+a:hover, a:active {
+	color: #559bb0;
+	text-decoration: underline;
+}
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+::-moz-selection {
+	color: #333;
+	background-color: #e3e3e3;
+}
+::selection {
+	color: #333;
+	background-color: #e3e3e3;
+}
+
+/*----------------------------------------------------------------------------
+
+   Utility Classes
+
+----------------------------------------------------------------------------*/
+
+.clear:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+.screen-reader {
+	left: -9999em;
+	position: absolute;
+	top: -9999em;
+}
+
+/*----------------------------------------------------------------------------
+
+   Global Design Elements & Structure
+
+----------------------------------------------------------------------------*/
+
+body {
+	background-color: #4e4e4e;
+}
+.wrapper {
+	margin: 0 auto;
+	max-width: 64em;
+	position: relative;
+}
+
+
+/*----------------------------------------------------------------------------
+
+   Typography
+
+----------------------------------------------------------------------------*/
+
+body {
+	color: #fff;
+	font-family: 'proxima-nova-soft', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	font-style: normal;
+	font-weight: 400;
+	text-rendering: optimizeLegibility;
+	-webkit-text-size-adjust: 100%;
+	    -ms-text-size-adjust: 100%;
+}
+h1 {
+	font-size: 2em;
+	font-weight: 400;
+	line-height: 1.25;
+	margin-bottom: 0.5em;
+}
+h2 {
+	font-size: 1.75em;
+	font-weight: 400;
+	line-height: 1.5;
+	margin-bottom: 0.5em;
+}
+h3 {
+	font-size: 1.25em;
+	font-weight: 400;
+	line-height: 1.66666667;
+	margin-bottom: 0.5em;
+}
+p {
+	font-size: 1em;
+	font-weight: 400;
+	line-height: 1.66666667;
+	margin-bottom: 1.66666667em;
+}
+hr {
+  background-color: #282828;
+  border: medium none;
+  color: #282828;
+  display: block;
+  height: 3px;
+  margin: 2.5em auto;
+  width: 7.875em;
+}
+@media only screen and ( min-width: 40em ) {
+	h1 {
+		font-size: 2.857em;
+	}
+	p {
+		font-size: 1.125em;
+	}
+}
+
+/*----------------------------------------------------------------------------
+
+   Lists
+
+----------------------------------------------------------------------------*/
+
+ul, ol {
+	font-size: 1.125em;
+	line-height: 1.66666667;
+	margin-bottom: 1.66666667em;
+}
+ul, ol {
+	padding-left: 1.44444444em;
+}
+ul {
+	list-style: disc;
+}
+ul ul, ol ul {
+	list-style: circle;
+}
+ol {
+	list-style: decimal;
+}
+ul ol, ol ol {
+	list-style: lower-alpha;
+}
+ol ol ol {
+	list-style: decimal;
+}
+ul ul, ol ul, ul ol, ol ol {
+	font-size: inherit;
+	margin: 0.31578937em 0;
+}
+ul ul, ol ul {
+	padding-left: 0.84210526em;
+}
+ul ol, ol ol {
+	padding-left: 1.38888889em;
+}
+li {
+	margin-bottom: 0.33333333em;
+}
+
+/*----------------------------------------------------------------------------
+
+   Buttons
+
+----------------------------------------------------------------------------*/
+
+a.action-button {
+	box-sizing: content-box;
+	border-radius: 0.375em;
+	display: inline-block;
+	line-height: 1;
+	min-width: inherit;
+	padding: 1.3125em 1.5em;
+	text-align: center;
+	width: auto;
+	font-size: 1.125em;
+	background-color: #a53a35;
+	padding: 1.5em;
+	text-decoration: none;
+	-webkit-border-radius: 0.375em;
+	   -webkit-box-sizing: content-box;
+	      -moz-box-sizing: content-box;
+}
+a.action-button:hover {
+	background-color: #204b6d;
+}
+
+/*----------------------------------------------------------------------------
+
+   Site Header
+
+----------------------------------------------------------------------------*/
+
+header[role=banner] {
+	padding: 1.5626em 1.25em;
+	position: relative;
+}
+a.logo {
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.4285em;
+}
+.logo {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+.logo img {
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;
+}
+
+/*----------------------------------------------------------------------------
+
+   Site Footer
+
+----------------------------------------------------------------------------*/
+
+footer[role=contentinfo] {
+	padding: 1.875em 1.25em;
+	position: relative;
+}
+.company-info {
+	position: relative;
+}
+.company-info p {
+	color: #7f7f7f;
+	font-size: 0.9375em;
+	text-align: center;
+}
+p.company-address {
+	padding-top: 3em;
+}
+
+/*----------------------------------------------------------------------------
+
+   Superhero Value Prop
+
+----------------------------------------------------------------------------*/
+
+.superhero-valueprop {
+	overflow: hidden;
+	padding: 6% 1.25em;
+	position: relative;
+}
+.superhero-content {
+	max-width: 41em;
+	margin: 0 auto;
+	text-align: center;
+}
+.superhero-valueprop h1,
+.superhero-valueprop p {
+	color: #fff;
+}
+.superhero-valueprop a.action-button {
+	font-size: 1.125em;
+}
+.superhero-background {
+	background-color: #c8493d;
+	background-size: cover;
+	overflow: hidden;
+	position: relative;
+}
+.learn-more {
+	margin-top: 15%;
+}
+
+/*----------------------------------------------------------------------------
+
+   Slides
+
+----------------------------------------------------------------------------*/
+
+.slide {
+	padding: 5% 1% 0;
+}
+.slide-b {
+	background-color: #a53a35;
+}
+.slide-a,
+.red-bkgrnd {
+	background-color: #c8493d;
+}
+.slide-content {
+	margin: 0 auto;
+	padding: 6%;
+	text-align: center;
+}
+.half-slide {
+	background-color: #a53a35;
+	border: 4px #c8493d solid;
+	padding: 8%;
+	text-align: center;
+}
+.half-slide img {
+	width: 150px;
+	height: 150px;
+	margin: 0 auto 5%;
+}
+.slide-content h2 {
+	margin-top: 
+}
+.slide-content p {
+	max-width: 34.25em;
+	margin: 1% auto;
+}
+.slide-content figure {
+	margin: 4%;
+}
+a.hello {
+	text-decoration: none;
+	color: #fff;
+}
+a.hello:hover {
+	color: #204b6d;
+}
+@media only screen and ( min-width: 40em ) {
+	.slide {
+		padding: 5% 10% 0;
+	}
+	.half-slide {
+		width: 50%;
+		float: left;
+		min-height: 32em;
+	}
+	.half-slide img {
+		width: 200px;
+		height: 200px;
+	}
+}
