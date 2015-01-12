@@ -117,13 +117,16 @@ blockquote, q {
 
 ----------------------------------------------------------------------------*/
 
-body {
-	background-color: #4e4e4e;
-}
 .wrapper {
 	margin: 0 auto;
-	max-width: 64em;
+	max-width: 75em;
 	position: relative;
+}
+.pull-right {
+	float: right;
+}
+.pull-left {
+	float: left;
 }
 
 
@@ -266,19 +269,20 @@ header[role=banner] {
 	position: relative;
 }
 a.logo {
-	text-decoration: none;
-	color: #fff;
+/*	color: #fff;*/
+	color: #c8493d;
 	font-size: 1.4285em;
-}
-.logo {
-	display: block;
-	margin: 0 auto;
-	text-align: center;
+	text-decoration: none;
 }
 .logo img {
-	width: 40px;
-	height: 40px;
-	margin: 0 auto;
+/*	width: 100px;*/
+	width: 140px;
+/*	margin: 0 auto;*/
+}
+.main-nav li {
+	float: left;
+	list-style: none;
+	margin-right: 0.75em;
 }
 
 /*----------------------------------------------------------------------------
@@ -288,6 +292,7 @@ a.logo {
 ----------------------------------------------------------------------------*/
 
 footer[role=contentinfo] {
+	background-color: #4e4e4e;
 	padding: 1.875em 1.25em;
 	position: relative;
 }
@@ -297,7 +302,6 @@ footer[role=contentinfo] {
 .company-info p {
 	color: #7f7f7f;
 	font-size: 0.9375em;
-	text-align: center;
 }
 p.company-address {
 	padding-top: 3em;
@@ -305,32 +309,38 @@ p.company-address {
 
 /*----------------------------------------------------------------------------
 
-   Superhero Value Prop
+   Hero Value Prop
 
 ----------------------------------------------------------------------------*/
 
-.superhero-valueprop {
+.hero-background {
+	background-image: url(images/landing-page-hero-rat.jpg);
+	background-color: #fff;
+	background-size: cover;
+	background-repeat: no-repeat;
+/*	border-bottom: 8px solid #c8493d;*/
+	min-height: 33.75em;
 	overflow: hidden;
+	position: relative;
+}
+.hero-valueprop {
 	padding: 6% 1.25em;
 	position: relative;
 }
-.superhero-content {
-	max-width: 41em;
-	margin: 0 auto;
-	text-align: center;
+.hero-content {
+/*	max-width: 41em;*/
+/*	margin: 0 auto;*/
+/*	text-align: center;*/
+	text-align: right;
 }
-.superhero-valueprop h1,
-.superhero-valueprop p {
-	color: #fff;
+.hero-valueprop h1,
+.hero-valueprop h2,
+.hero-valueprop p {
+/*	color: #fff;*/
+	color: #c8493d;
 }
-.superhero-valueprop a.action-button {
+.hero-valueprop a.action-button {
 	font-size: 1.125em;
-}
-.superhero-background {
-	background-color: #c8493d;
-	background-size: cover;
-	overflow: hidden;
-	position: relative;
 }
 .learn-more {
 	margin-top: 15%;
@@ -342,6 +352,9 @@ p.company-address {
 
 ----------------------------------------------------------------------------*/
 
+.slides {
+	background-color: #c8493d;
+}
 .slide {
 	padding: 5% 1% 0;
 }
@@ -359,8 +372,8 @@ p.company-address {
 }
 .half-slide {
 	background-color: #a53a35;
-	border: 4px #c8493d solid;
 	padding: 8%;
+	margin: 8%;
 	text-align: center;
 }
 .half-slide img {
