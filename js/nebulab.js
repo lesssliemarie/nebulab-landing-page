@@ -20,12 +20,17 @@
 
 }(document));
 
-(function($) {
 
-	$(document).ready(function() {			
-	  
-	  // put custom jQuery here		
-		
+(function() {
+	// animation for requestBeta form
+	$('#requestBeta').click(function () {
+		$(this).hide();
+		$('#contact-form').show(300, "swing");
 	});
 
-})(jQuery);
+	// fadeOut timer for requestBetaSubmitted dialog
+	setTimeout(function() {
+		$('#requestBetaSubmitted').fadeOut(400);
+	}, 3000);
+ 
+})();  
