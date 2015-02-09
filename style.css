@@ -421,6 +421,18 @@ input[type=submit]:hover, button[type=submit]:hover, input[type=button]:hover {
 :-ms-input-placeholder {
 	color: #e1e1e1;
 }
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+input:invalid {
+	border: 1px solid #f58428;
+}
+input:valid {
+	border: 1px solid #f58428;
+}
+input:required {
+    box-shadow:none;
+}
 
 
 /*----------------------------------------------------------------------------
@@ -552,11 +564,11 @@ a.request-beta-btn {
 	position: absolute;
 	top: 42px;
 }
+#error-message {
+	font-size: 0.75em;
+	margin-top: 1em;
+}
 @media only screen and (min-width: 41.125em) {
-	#contact-form input[type='email'] {
-		height: 38px;
-/*		margin-top: -1px;*/
-	}
 	.contact-submit {
 		border-radius: 0 0.25em 0.25em 0;
 			-webkit-border-radius: 0 0.25em 0.25em 0;
@@ -577,6 +589,7 @@ dialog#requestBetaSubmitted {
 	background-color: #36839E;
 	border: none;
 	color: #fff;
+	display: none;
 	opacity: 0.8;
 	padding: 0.5em;
 	top: 0px;
